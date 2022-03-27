@@ -29,6 +29,8 @@ class SeventhStepViewController: UIViewController {
                     }
                 } else {
                     performSegue(withIdentifier: "GoToMain", sender: nil)
+                    LandscapeManager.shared.isFirstLaunch = true
+
                 }
             } else {
                 loadingView.isHidden = false
@@ -46,6 +48,7 @@ class SeventhStepViewController: UIViewController {
                 }
             } else {
                 performSegue(withIdentifier: "GoToMain", sender: nil)
+                LandscapeManager.shared.isFirstLaunch = true
             }
         }
     }

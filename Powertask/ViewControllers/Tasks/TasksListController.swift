@@ -20,11 +20,6 @@ class TasksListController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // MARK: - Mock data
-//        subjects = [PTSubject(name: "iOS", color: "#444321"), PTSubject(name: "Acceso a datos", color: "#453234"), PTSubject(name: "ingles", color: "#356433")]
-//        //userTasks = MockUser.user.tasks
-
-        
         NetworkingProvider.shared.listTasks { tasks in
             PTUser.shared.tasks = tasks
             self.userTasks = PTUser.shared.tasks
@@ -88,6 +83,7 @@ extension TasksListController: SaveNewTaskProtocol, TaskCellDoneDelegate {
         }
     }
 }
+
 extension TasksListController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

@@ -231,7 +231,7 @@ extension CalendarsViewController: FSCalendarDelegate, FSCalendarDataSource, FSC
 // MARK: - TableView Delegate and DataSource
 extension CalendarsViewController: UITableViewDelegate, UITableViewDataSource {
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
-        guard let events = PTUser.shared.events else { return UIColor.white }
+        guard let events = PTUser.shared.events else { return UIColor.black }
         if date.formatToString(using: .justDay) == Date.now.formatToString(using: .justDay) {
             return UIColor.white
         }

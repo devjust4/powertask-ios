@@ -32,6 +32,7 @@ class TimeTableViewController: UIViewController {
                 period.startDate.timeIntervalSince1970 < Date.now.timeIntervalSince1970 && period.endDate.timeIntervalSince1970 > Date.now.timeIntervalSince1970
             })
         }
+        print("--- curren period \(currentPeriod)")
         subjects = currentPeriod?.subjects
         blocks = filterAllBlocks(blocks: currentPeriod?.blocks)
     }

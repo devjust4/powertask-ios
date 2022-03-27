@@ -19,7 +19,6 @@ class ConciergeViewController: UIViewController {
 //        performSegue(withIdentifier: "toMain", sender: nil)
         if LandscapeManager.shared.isFirstLaunch {
             performSegue(withIdentifier: "toOnboarding", sender: nil)
-            LandscapeManager.shared.isFirstLaunch = true
         } else {
             GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
                 if user == nil || error != nil {
@@ -30,12 +29,10 @@ class ConciergeViewController: UIViewController {
                     }
                 } else {
                     self.performSegue(withIdentifier: "toMain", sender: nil)
-
                 }
             }
         }
     }
-
 }
 
 class LandscapeManager {
