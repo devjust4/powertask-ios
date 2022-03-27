@@ -16,7 +16,7 @@ class SesionsTasks: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     @IBOutlet weak var tableView: UITableView!
     var delegate: transferTasksProtocol?
-    var userTasks: [PTUser]?
+    var userTasks: [PTTask]?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +26,7 @@ class SesionsTasks: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         NetworkingProvider.shared.listTasks { tasks in
             PTUser.shared.tasks = tasks
-            self.userTasks = PTUser.shared.tasks as! [PTUser]
+            self.userTasks = PTUser.shared.tasks
             PTUser.shared.savePTUser()
             self.tableView.reloadData()
             print(tasks)

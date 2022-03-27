@@ -23,7 +23,7 @@ class SessionsViewController: UIViewController, transferTasksProtocol{
         
         selectTask?.layer.cornerRadius = 20
         selectTask?.layer.cornerCurve = .circular
-        taskSelected = UserDefaults.standard.value(forKey: "taskSelected") as! Bool
+        taskSelected = UserDefaults.standard.value(forKey: "taskSelected") as? Bool
         
         if taskSelected == true{
             defaultTimeRemainingActive = 40
