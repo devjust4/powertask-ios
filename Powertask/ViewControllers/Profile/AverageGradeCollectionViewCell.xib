@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20019"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AverageGradeCollectionViewCell" id="gTV-IL-0wX" customClass="AverageGradeCollectionViewCell" customModule="Powertask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="174" height="174"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="174" height="174"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OlaNotaMedia" translatesAutoresizingMaskIntoConstraints="NO" id="G6c-IS-eHZ">
+                        <rect key="frame" x="0.0" y="119.5" width="174" height="54.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nota Media" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JB7-2Q-nVQ">
+                        <rect key="frame" x="43" y="12" width="88" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.85882353779999998" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="85" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuK-CG-8OP">
+                        <rect key="frame" x="46" y="46.5" width="82" height="73"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="61"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="1" green="0.1764705926" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="JB7-2Q-nVQ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="07w-iM-1NE"/>
+                <constraint firstAttribute="bottom" secondItem="G6c-IS-eHZ" secondAttribute="bottom" id="684-al-aMF"/>
+                <constraint firstItem="TuK-CG-8OP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="7ha-7m-8lX"/>
+                <constraint firstAttribute="trailing" secondItem="G6c-IS-eHZ" secondAttribute="trailing" id="A81-bA-tPV"/>
+                <constraint firstItem="JB7-2Q-nVQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="QU3-XH-W8v"/>
+                <constraint firstItem="G6c-IS-eHZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mLC-8I-vbt"/>
+                <constraint firstItem="G6c-IS-eHZ" firstAttribute="top" secondItem="TuK-CG-8OP" secondAttribute="bottom" id="nK3-O1-EtR"/>
+                <constraint firstItem="TuK-CG-8OP" firstAttribute="top" secondItem="JB7-2Q-nVQ" secondAttribute="bottom" constant="13.5" id="xjc-Bl-Mbg"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="153"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="OlaNotaMedia" width="194" height="54.5"/>
+    </resources>
+</document>
