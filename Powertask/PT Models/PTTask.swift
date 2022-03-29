@@ -12,8 +12,8 @@ struct PTTask: Codable {
     var id: Int?
     var google_id: String?
     var name: String
-    var startDate: Date?
-    var handoverDate: Date?
+    var startDate: Int?
+    var handoverDate: Int?
     var mark: Float?
     var description: String?
     var completed: Int

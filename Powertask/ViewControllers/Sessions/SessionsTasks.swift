@@ -20,6 +20,7 @@ class SesionsTasks: UIViewController, UITableViewDataSource, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userTasks = PTUser.shared.tasks
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
@@ -49,7 +50,6 @@ class SesionsTasks: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UserDefaults.standard.set(true, forKey: "taskSelected")
         delegate?.transferTasks(self, taskTitle: "ok")
         self.navigationController?.popViewController(animated: true)
     }

@@ -79,8 +79,13 @@ class AddTaskViewController: UIViewController {
                 descriptionLabelToNote.isActive = false
                 descriptionLabelToStartdateLabel.isActive = true
                 markTextfieldToStartDatePicker.isActive = false
+                descriptionTextView.isEditable = true
             }else{
                 doneButton.isHidden = true
+                subjectButton.isEnabled = false
+                markTextField.isEnabled = false
+                descriptionTextView.isEditable = false
+                taskNameTextField.isEnabled = false
             }
             
             taskNameTextField.text = task.name
@@ -96,12 +101,12 @@ class AddTaskViewController: UIViewController {
 //                subjectButton.tintColor = UIColor(hex: subject.color)
             }
             if let dueDate = task.startDate {
-//                startDatePicker.setDate(Date(timeIntervalSince1970: TimeInterval(dueDate)), animated: false)
-                startDatePicker.setDate(dueDate, animated: false)
+                startDatePicker.setDate(Date(timeIntervalSince1970: TimeInterval(dueDate)), animated: false)
+//                startDatePicker.setDate(dueDate, animated: false)
             }
             if let handoverDate = task.handoverDate {
-//                handoverDatePicker.setDate(Date(timeIntervalSince1970: TimeInterval(handoverDate)), animated: false)
-                startDatePicker.setDate(handoverDate, animated: false)
+                handoverDatePicker.setDate(Date(timeIntervalSince1970: TimeInterval(handoverDate)), animated: false)
+//                startDatePicker.setDate(handoverDate, animated: false)
             }
             if Bool(truncating: task.completed as NSNumber){
                 doneButton.setImage(Constants.taskDoneImage, for: .normal)
@@ -131,6 +136,12 @@ class AddTaskViewController: UIViewController {
         
         if userIsEdditing {
             configInterfaceWhileEdditiing(isEdditing: true)
+            descriptionTextView.isEditable = true
+        }else{
+            descriptionTextView.isEditable = false
+            markTextField.isEnabled = false
+            subjectButton.isEnabled = false
+            taskNameTextField.isEnabled = false
         }
     }
     
@@ -205,11 +216,21 @@ class AddTaskViewController: UIViewController {
     // MARK: - Supporting Functions
     func configInterfaceWhileEdditiing(isEdditing: Bool){
         startDatePicker.isEnabled = isEdditing
-        descriptionTextView.isEditable = isEdditing
-        descriptionTextView.isSelectable = isEdditing
         addButton.isHidden = !isEdditing
-        taskNameTextField.isEnabled = isEdditing
-        markTextField.isEnabled = isEdditing
+        if let task = userTask{
+            if task.google_id == nil{
+                taskNameTextField.isEnabled = isEdditing
+                markTextField.isEnabled = isEdditing
+                descriptionTextView.isEditable = isEdditing
+                descriptionTextView.isSelectable = isEdditing
+                subjectButton.isEnabled = isEdditing
+            }else{
+                taskNameTextField.isEnabled = false
+                markTextField.isEnabled = false
+//                descriptionTextView.isEditable = false
+//                descriptionTextView.isSelectable = false
+            }
+        }
         if isEdditing {
             editButton.title = "Guardar"
         } else {
@@ -232,26 +253,22 @@ class AddTaskViewController: UIViewController {
             // TODO: Controlar nota FLOAT?
             userTask!.mark = Float(markTextField.text ?? "00")
             print(handoverDatePicker.date)
-            userTask!.handoverDate = handoverDatePicker.date
-//            Int(handoverDatePicker.date.timeIntervalSince1970)
-            print(userTask?.handoverDate)
+//            userTask!.handoverDate = handoverDatePicker.date
+            Int(handoverDatePicker.date.timeIntervalSince1970)
             if !startDatePicker.isHidden {
-                userTask!.startDate = startDatePicker.date
-//                Int(startDatePicker.date.timeIntervalSince1970)
+//                userTask!.startDate = startDatePicker.date
+                Int(startDatePicker.date.timeIntervalSince1970)
             }
             // TODO: falta perform date
         } else {
-            userTask!.name = taskNameTextField.text ?? "Tarea sin nombre"
-            userTask!.description = descriptionTextView.text
-            userTask!.mark = Float(markTextField.text ?? "00")
-            print(handoverDatePicker.date)
-            userTask!.handoverDate = handoverDatePicker.date
-//            Int(handoverDatePicker.date.timeIntervalSince1970)
-            print(userTask?.handoverDate)
+            var name = taskNameTextField.text
+            var description = descriptionTextView.text
+            var handoverDate = Int(handoverDatePicker.date.timeIntervalSince1970)
+            var startDate: Int?
             if !startDatePicker.isHidden {
-                userTask!.startDate = startDatePicker.date
-//                Int(startDatePicker.date.timeIntervalSince1970)
+                var startDate = Int(handoverDatePicker.date.timeIntervalSince1970)
             }
+            userTask = PTTask(name: name!, startDate: startDate, handoverDate: handoverDate, description: description!, completed: 0, subject: nil, subtasks: nil)
             delegate?.appendNewTask(newTask: userTask!)
         }
     }

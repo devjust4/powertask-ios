@@ -27,7 +27,7 @@ struct SessionActive: View {
                     .stroke(timeRemaining > 6 ? Color.green : timeRemaining > 3 ? Color.yellow : Color.red, style: StrokeStyle(lineWidth: lineWith, lineCap: .round))
                     .rotationEffect(.degrees(-90))
                     .animation(.easeInOut)
-                Text("\(Int(timeRemaining))").font(.system(size: 50))
+                Text("\(Int(timeRemaining))").font(.system(size: 50, weight: .light, design: .default))
             }.frame(width: radius * 4, height: radius * 4)
         }.onReceive(timer, perform: { _ in
             guard isActive else { return }

@@ -20,15 +20,14 @@ class TasksListController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userTasks = PTUser.shared.tasks
         NetworkingProvider.shared.listTasks { tasks in
-            PTUser.shared.tasks = tasks
-            self.userTasks = PTUser.shared.tasks
             PTUser.shared.savePTUser()
+            self.userTasks = PTUser.shared.tasks
             self.tasksTableView.reloadData()
             print(tasks)
         } failure: { msg in
             print("ERROR-tasks")
-            print(msg)
         }
         
         NetworkingProvider.shared.listSubjects { subjects in
@@ -56,14 +55,15 @@ class TasksListController: UITableViewController {
                 let controller = segue.destination as? AddTaskViewController
                 controller?.newTask = true
                 print("true")
-            }
+//            }
         }
     }
    
-    @IBAction func addNewTask(_ sender: Any) {
+        func addNewTask(_ sender: Any) {
         performSegue(withIdentifier: "showTaskDetail", sender: self)
     }
     
+}
 }
 
 // MARK: - TableView Extension
@@ -133,7 +133,7 @@ extension TasksListController {
         if let task = userTasks?[indexPath.row] {
             if task.google_id == nil{
                 cell.doneButton.configuration?.baseForegroundColor = UIColor.black
-                cell.doneButton.isEnabled = false
+                cell.doneButton.isEnabled = true
             }else{
                 cell.doneButton.configuration?.baseForegroundColor = UIColor.systemGray4
                 cell.doneButton.isEnabled = false
@@ -147,8 +147,8 @@ extension TasksListController {
                 cell.doneButton.setImage(Constants.taskUndoneImage, for: .normal)
             }
             if let date = task.startDate{
-//                var datePicker = (Date(timeIntervalSince1970: TimeInterval(date)))
-                cell.taskDueDateLabel.text = date.formatted(date: .long, time: .omitted)
+                var datePicker = (Date(timeIntervalSince1970: TimeInterval(date)))
+                cell.taskDueDateLabel.text = datePicker.formatted(date: .long, time: .omitted)
             }
             // TODO: Pensar manera de diferenciar asignaturas
             cell.courseColorImage.backgroundColor = UIColor(task.subject!.color)

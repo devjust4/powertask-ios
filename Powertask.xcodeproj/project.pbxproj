@@ -74,8 +74,6 @@
 		79DEE2C92797002C00F79E83 /* UserTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE2C82797002C00F79E83 /* UserTaskTableViewCell.swift */; };
 		79DEE2CF27972F4A00F79E83 /* PTTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE2CE27972F4A00F79E83 /* PTTask.swift */; };
 		79DEE2D12797399D00F79E83 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE2D02797399D00F79E83 /* Constants.swift */; };
-		79E44B2827F0FF22007B1B44 /* SessionsTasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2427F0FF22007B1B44 /* SessionsTasksCell.swift */; };
-		79E44B2927F0FF22007B1B44 /* SessionsConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2527F0FF22007B1B44 /* SessionsConfigurationCell.swift */; };
 		79E44B2A27F0FF22007B1B44 /* ProgressCircleSessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2627F0FF22007B1B44 /* ProgressCircleSessions.swift */; };
 		79E44B2B27F0FF22007B1B44 /* ProgressCircleSessionsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2727F0FF22007B1B44 /* ProgressCircleSessionsActive.swift */; };
 		79E44B3127F10533007B1B44 /* SessionsCountdownActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2C27F10532007B1B44 /* SessionsCountdownActive.swift */; };
@@ -87,7 +85,6 @@
 		B6A07F7527F0D3A700FADF90 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7427F0D3A700FADF90 /* GoogleSignIn */; };
 		B6A07F7827F0D3C000FADF90 /* UIColorHexSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7727F0D3C000FADF90 /* UIColorHexSwift */; };
 		B6A07F7B27F0D3DF00FADF90 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7A27F0D3DF00FADF90 /* Alamofire */; };
-		B6B9371B27F0D6D500ADFC86 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B9371627F0D6D500ADFC86 /* SessionsViewController.swift */; };
 		B6D963EE27AB0F2400F8259D /* CalendarSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D963ED27AB0F2400F8259D /* CalendarSettingsController.swift */; };
 		B6D963F227AB121100F8259D /* PeriodsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D963F127AB121100F8259D /* PeriodsController.swift */; };
 		B6D963F427AB123F00F8259D /* OtherCalendarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D963F327AB123F00F8259D /* OtherCalendarsController.swift */; };
@@ -99,6 +96,8 @@
 		B6D9640327B08BBF00F8259D /* PeriodNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9640227B08BBF00F8259D /* PeriodNameTableViewCell.swift */; };
 		B6EC335927F0DD8800FB85D0 /* TasksListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC335827F0DD8800FB85D0 /* TasksListController.swift */; };
 		B6EC335B27F0DD8E00FB85D0 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC335A27F0DD8E00FB85D0 /* AddTaskViewController.swift */; };
+		B6EC336527F134A400FB85D0 /* SessionsConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC336427F134A400FB85D0 /* SessionsConfigurationCell.swift */; };
+		B6EC336727F134AA00FB85D0 /* SessionsTasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC336627F134AA00FB85D0 /* SessionsTasksCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,8 +167,6 @@
 		79DEE2C82797002C00F79E83 /* UserTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTaskTableViewCell.swift; sourceTree = "<group>"; };
 		79DEE2CE27972F4A00F79E83 /* PTTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTTask.swift; sourceTree = "<group>"; };
 		79DEE2D02797399D00F79E83 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		79E44B2427F0FF22007B1B44 /* SessionsTasksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionsTasksCell.swift; path = "../../../../../../../../Containers/com.apple.mail/Data/Library/Mail Downloads/2FFD9E85-3A84-4765-953F-D8D5B95C3FDB/SessionsTasksCell.swift"; sourceTree = "<group>"; };
-		79E44B2527F0FF22007B1B44 /* SessionsConfigurationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionsConfigurationCell.swift; path = "../../../../../../../../Containers/com.apple.mail/Data/Library/Mail Downloads/536419E8-0A7C-4ACF-8910-BF9A00A6FA8A/SessionsConfigurationCell.swift"; sourceTree = "<group>"; };
 		79E44B2627F0FF22007B1B44 /* ProgressCircleSessions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircleSessions.swift; sourceTree = "<group>"; };
 		79E44B2727F0FF22007B1B44 /* ProgressCircleSessionsActive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircleSessionsActive.swift; sourceTree = "<group>"; };
 		79E44B2C27F10532007B1B44 /* SessionsCountdownActive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsCountdownActive.swift; sourceTree = "<group>"; };
@@ -177,7 +174,6 @@
 		79E44B2E27F10532007B1B44 /* SessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
 		79E44B2F27F10532007B1B44 /* SessionsTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsTasks.swift; sourceTree = "<group>"; };
 		79E44B3027F10532007B1B44 /* SessionsCountDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsCountDown.swift; sourceTree = "<group>"; };
-		B6B9371627F0D6D500ADFC86 /* SessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
 		B6D963ED27AB0F2400F8259D /* CalendarSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSettingsController.swift; sourceTree = "<group>"; };
 		B6D963F127AB121100F8259D /* PeriodsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodsController.swift; sourceTree = "<group>"; };
 		B6D963F327AB123F00F8259D /* OtherCalendarsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCalendarsController.swift; sourceTree = "<group>"; };
@@ -189,6 +185,8 @@
 		B6D9640227B08BBF00F8259D /* PeriodNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodNameTableViewCell.swift; sourceTree = "<group>"; };
 		B6EC335827F0DD8800FB85D0 /* TasksListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksListController.swift; sourceTree = "<group>"; };
 		B6EC335A27F0DD8E00FB85D0 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		B6EC336427F134A400FB85D0 /* SessionsConfigurationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionsConfigurationCell.swift; path = "../../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/545F9A3B-64EF-4B5B-9E7D-ABC907D60E3C/SessionsConfigurationCell.swift"; sourceTree = "<group>"; };
+		B6EC336627F134AA00FB85D0 /* SessionsTasksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionsTasksCell.swift; path = "../../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/A7232ACC-7217-4EEE-AEE6-F6BEA6CDEF40/SessionsTasksCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,7 +422,6 @@
 				79E44B2C27F10532007B1B44 /* SessionsCountdownActive.swift */,
 				79E44B2F27F10532007B1B44 /* SessionsTasks.swift */,
 				79E44B2E27F10532007B1B44 /* SessionsViewController.swift */,
-				B6B9371627F0D6D500ADFC86 /* SessionsViewController.swift */,
 			);
 			path = Sessions;
 			sourceTree = "<group>";
@@ -484,8 +481,8 @@
 			children = (
 				79E44B2627F0FF22007B1B44 /* ProgressCircleSessions.swift */,
 				79E44B2727F0FF22007B1B44 /* ProgressCircleSessionsActive.swift */,
-				79E44B2527F0FF22007B1B44 /* SessionsConfigurationCell.swift */,
-				79E44B2427F0FF22007B1B44 /* SessionsTasksCell.swift */,
+				B6EC336627F134AA00FB85D0 /* SessionsTasksCell.swift */,
+				B6EC336427F134A400FB85D0 /* SessionsConfigurationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -617,6 +614,7 @@
 				79E44B3427F10533007B1B44 /* SessionsTasks.swift in Sources */,
 				790BE66F27BF9C4A009D2706 /* NetworkingProvider.swift in Sources */,
 				79DEE2C92797002C00F79E83 /* UserTaskTableViewCell.swift in Sources */,
+				B6EC336727F134AA00FB85D0 /* SessionsTasksCell.swift in Sources */,
 				B6D9640127B04E4C00F8259D /* PeriodDateTableViewCell.swift in Sources */,
 				79C6472F27D3C387000CB0E9 /* FirstPeriodConfigViewController.swift in Sources */,
 				79DDD5D527CD4C6900235AE0 /* GoogleSignInViewController.swift in Sources */,
@@ -636,7 +634,6 @@
 				B6D963F427AB123F00F8259D /* OtherCalendarsController.swift in Sources */,
 				7908768327BFC2DA00E9D0A4 /* PTSubtask.swift in Sources */,
 				7920127D27D8054E00FBCAFC /* NoEventsTableViewCell.swift in Sources */,
-				79E44B2827F0FF22007B1B44 /* SessionsTasksCell.swift in Sources */,
 				B6D963FF27B049C500F8259D /* PeriodSubjectTableViewCell.swift in Sources */,
 				7911F32327A9AF02007036DA /* PTEvent.swift in Sources */,
 				79C6471B27D2BEEC000CB0E9 /* CircularProgressView.swift in Sources */,
@@ -649,7 +646,6 @@
 				79E44B3527F10533007B1B44 /* SessionsCountDown.swift in Sources */,
 				79DDD5DB27CD4CCB00235AE0 /* FifthStepViewController.swift in Sources */,
 				7920127F27D91E6800FBCAFC /* AllDaySwitchTableViewCell.swift in Sources */,
-				B6B9371B27F0D6D500ADFC86 /* SessionsViewController.swift in Sources */,
 				790BE65B27BC00BA009D2706 /* PTBlock.swift in Sources */,
 				79DDD5CD27CCF88F00235AE0 /* PTRequestIncerceptor.swift in Sources */,
 				79DDD5E127CDF77500235AE0 /* CircularImageView.swift in Sources */,
@@ -680,7 +676,7 @@
 				79E44B2A27F0FF22007B1B44 /* ProgressCircleSessions.swift in Sources */,
 				79C6473127D3C3A0000CB0E9 /* TimeTableConfigViewController.swift in Sources */,
 				7908767527BFB25800E9D0A4 /* MockRequestViewController.swift in Sources */,
-				79E44B2927F0FF22007B1B44 /* SessionsConfigurationCell.swift in Sources */,
+				B6EC336527F134A400FB85D0 /* SessionsConfigurationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
