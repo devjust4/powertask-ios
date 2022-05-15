@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 
 class TasksListController: UITableViewController {
-
+    
     var userTasks: [PTTask]?
     var subjects: [PTSubject]?
     
@@ -38,7 +38,7 @@ class TasksListController: UITableViewController {
         }
     }
     
-            
+    
     override func viewWillAppear(_ animated: Bool) {
         print("appearing")
         tasksTableView.reloadData()
@@ -55,15 +55,15 @@ class TasksListController: UITableViewController {
                 let controller = segue.destination as? AddTaskViewController
                 controller?.newTask = true
                 print("true")
-//            }
+                //            }
+            }
         }
-    }
-   
+        
         func addNewTask(_ sender: Any) {
-        performSegue(withIdentifier: "showTaskDetail", sender: self)
+            performSegue(withIdentifier: "showTaskDetail", sender: self)
+        }
+        
     }
-    
-}
 }
 
 // MARK: - TableView Extension
@@ -96,38 +96,38 @@ extension TasksListController {
         }
         return 0
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showTaskDetail", sender: tableView.cellForRow(at:indexPath))
     }
     
-//    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//
-//            let delete = UIContextualAction(style: .normal, title: "Borrar") { (action, view, completion) in
-//                if let task = self.userTasks {
-//                    self.userTasks?.remove(at: indexPath.row)
-//                    tableView.deleteRows(at: [indexPath], with: .left)
-//
-//                    NetworkingProvider.shared.deleteTask(task: task[indexPath.row]) { msg in
-//                        print("removed")
-//                    } failure: { msg in
-//                        print("error removing task")
-//                    }
-//                }
-//            }
-//            delete.backgroundColor =  UIColor(named: "DestructiveColor")
-//
-//            let edit = UIContextualAction(style: .normal, title: "Editar") { (action, view, completion) in
-//                self.performSegue(withIdentifier: "showTaskDetail", sender: indexPath)
-//                print(indexPath)
-//                completion(false)
-//            }
-//            edit.backgroundColor =  UIColor(named: "MainColor")
-//            let config = UISwipeActionsConfiguration(actions: [delete, edit])
-//            config.performsFirstActionWithFullSwipe = false
-//            return config
-//        }
-
+    //    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    //
+    //            let delete = UIContextualAction(style: .normal, title: "Borrar") { (action, view, completion) in
+    //                if let task = self.userTasks {
+    //                    self.userTasks?.remove(at: indexPath.row)
+    //                    tableView.deleteRows(at: [indexPath], with: .left)
+    //
+    //                    NetworkingProvider.shared.deleteTask(task: task[indexPath.row]) { msg in
+    //                        print("removed")
+    //                    } failure: { msg in
+    //                        print("error removing task")
+    //                    }
+    //                }
+    //            }
+    //            delete.backgroundColor =  UIColor(named: "DestructiveColor")
+    //
+    //            let edit = UIContextualAction(style: .normal, title: "Editar") { (action, view, completion) in
+    //                self.performSegue(withIdentifier: "showTaskDetail", sender: indexPath)
+    //                print(indexPath)
+    //                completion(false)
+    //            }
+    //            edit.backgroundColor =  UIColor(named: "MainColor")
+    //            let config = UISwipeActionsConfiguration(actions: [delete, edit])
+    //            config.performsFirstActionWithFullSwipe = false
+    //            return config
+    //        }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! UserTaskTableViewCell
         if let task = userTasks?[indexPath.row] {
@@ -147,8 +147,8 @@ extension TasksListController {
                 cell.doneButton.setImage(Constants.taskUndoneImage, for: .normal)
             }
             if let date = task.startDate{
-                var datePicker = (Date(timeIntervalSince1970: TimeInterval(date)))
-                cell.taskDueDateLabel.text = datePicker.formatted(date: .long, time: .omitted)
+                let date = (Date(timeIntervalSince1970: TimeInterval(date)))
+                cell.taskDueDateLabel.text = date.formatted(date: .long, time: .omitted)
             }
             // TODO: Pensar manera de diferenciar asignaturas
             cell.courseColorImage.backgroundColor = UIColor(task.subject!.color)

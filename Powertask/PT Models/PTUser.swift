@@ -25,6 +25,7 @@ class PTUser: Codable {
     var events: [String : PTEvent]?
     var blocks: [PTBlock]?
     var widgets: PTWidgets?
+    var sessionConfig: [String: Double]?
     
     func savePTUser(){
         UserDefaults.standard.setCodableObject(PTUser.shared, forKey: "user")

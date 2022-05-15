@@ -8,18 +8,20 @@
 import UIKit
 import Alamofire
 
-protocol transferTasksProtocol: AnyObject{
-    func transferTasks(_ view: SesionsTasks, taskTitle: String)
+protocol TaskPickerProtocol: AnyObject{
+    func taskDidSelected(task: PTTask)
 }
 
-class SesionsTasks: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class TaskPicker: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
-    var delegate: transferTasksProtocol?
+    var delegate: TaskPickerProtocol?
     var userTasks: [PTTask]?
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.prefersLargeTitles = false
+
         userTasks = PTUser.shared.tasks
         tableView.dataSource = self
         tableView.delegate = self
@@ -36,6 +38,9 @@ class SesionsTasks: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -50,7 +55,9 @@ class SesionsTasks: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.transferTasks(self, taskTitle: "ok")
+        if let task = PTUser.shared.tasks?[indexPath.row] {
+            delegate?.taskDidSelected(task: task)
+        }
         self.navigationController?.popViewController(animated: true)
     }
 
@@ -58,7 +65,20 @@ class SesionsTasks: UIViewController, UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCell(withIdentifier: "tasksSessionsCell", for: indexPath) as! SessionsTasksTableViewCell
         
         if let task = userTasks?[indexPath.row]{
-            cell.titleTask.text = task.name
+            cell.taskTitle.text = task.name
+            cell.taskDate.text = task.handoverDate?.description
+            if let date = task.handoverDate {
+                let date = (Date(timeIntervalSince1970: TimeInterval(date)))
+                cell.taskDate.text = date.formatted(date: .long, time: .omitted)
+            } else {
+                cell.taskDate.text = "Sin fecha de entrega"
+            }
+            if let subject = task.subject {
+                cell.taskColor.backgroundColor = UIColor(subject.color)
+            } else {
+                cell.taskColor.backgroundColor = UIColor(named: "AccentColor")!
+            }
+           
             return cell
         }
         

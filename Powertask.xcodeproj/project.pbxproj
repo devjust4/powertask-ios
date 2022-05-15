@@ -42,8 +42,12 @@
 		797849212791865F00EB8C4C /* Powertask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7978491F2791865F00EB8C4C /* Powertask.xcdatamodeld */; };
 		797849232791866000EB8C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797849222791866000EB8C4C /* Assets.xcassets */; };
 		797849262791866000EB8C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797849242791866000EB8C4C /* LaunchScreen.storyboard */; };
+		797C8BAA282C37B000807A2B /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C8BA9282C37B000807A2B /* CircularProgressBar.swift */; };
 		79865F1127D61262004FB0B4 /* DataLoadinProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79865F1027D61262004FB0B4 /* DataLoadinProgressViewController.swift */; };
 		798B064427E12E94004F1254 /* SwiftHEXColors in Frameworks */ = {isa = PBXBuildFile; productRef = 798B064327E12E94004F1254 /* SwiftHEXColors */; };
+		79A501382829934600E31C23 /* SessionsConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A501342829934600E31C23 /* SessionsConfigurationCell.swift */; };
+		79A501392829934600E31C23 /* SessionsTasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A501352829934600E31C23 /* SessionsTasksCell.swift */; };
+		79A5013B282993A200E31C23 /* ProgressCircleSessionsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5013A282993A200E31C23 /* ProgressCircleSessionsActive.swift */; };
 		79BD0D8527D2859F00849B4B /* SessionTimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD0D8327D2859F00849B4B /* SessionTimeCollectionViewCell.swift */; };
 		79BD0D8627D2859F00849B4B /* SessionTimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79BD0D8427D2859F00849B4B /* SessionTimeCollectionViewCell.xib */; };
 		79BD0D8927D2879200849B4B /* DaysUntilPeriodEndsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD0D8727D2879200849B4B /* DaysUntilPeriodEndsCollectionViewCell.swift */; };
@@ -75,11 +79,10 @@
 		79DEE2CF27972F4A00F79E83 /* PTTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE2CE27972F4A00F79E83 /* PTTask.swift */; };
 		79DEE2D12797399D00F79E83 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DEE2D02797399D00F79E83 /* Constants.swift */; };
 		79E44B2A27F0FF22007B1B44 /* ProgressCircleSessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2627F0FF22007B1B44 /* ProgressCircleSessions.swift */; };
-		79E44B2B27F0FF22007B1B44 /* ProgressCircleSessionsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2727F0FF22007B1B44 /* ProgressCircleSessionsActive.swift */; };
 		79E44B3127F10533007B1B44 /* SessionsCountdownActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2C27F10532007B1B44 /* SessionsCountdownActive.swift */; };
 		79E44B3227F10533007B1B44 /* SessionsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2D27F10532007B1B44 /* SessionsConfiguration.swift */; };
 		79E44B3327F10533007B1B44 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2E27F10532007B1B44 /* SessionsViewController.swift */; };
-		79E44B3427F10533007B1B44 /* SessionsTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2F27F10532007B1B44 /* SessionsTasks.swift */; };
+		79E44B3427F10533007B1B44 /* TaskPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2F27F10532007B1B44 /* TaskPicker.swift */; };
 		79E44B3527F10533007B1B44 /* SessionsCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B3027F10532007B1B44 /* SessionsCountDown.swift */; };
 		B6A07F7227F0D37C00FADF90 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7127F0D37C00FADF90 /* FSCalendar */; };
 		B6A07F7527F0D3A700FADF90 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7427F0D3A700FADF90 /* GoogleSignIn */; };
@@ -96,8 +99,6 @@
 		B6D9640327B08BBF00F8259D /* PeriodNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9640227B08BBF00F8259D /* PeriodNameTableViewCell.swift */; };
 		B6EC335927F0DD8800FB85D0 /* TasksListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC335827F0DD8800FB85D0 /* TasksListController.swift */; };
 		B6EC335B27F0DD8E00FB85D0 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC335A27F0DD8E00FB85D0 /* AddTaskViewController.swift */; };
-		B6EC336527F134A400FB85D0 /* SessionsConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC336427F134A400FB85D0 /* SessionsConfigurationCell.swift */; };
-		B6EC336727F134AA00FB85D0 /* SessionsTasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC336627F134AA00FB85D0 /* SessionsTasksCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,7 +138,11 @@
 		797849222791866000EB8C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		797849252791866000EB8C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		797849272791866000EB8C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		797C8BA9282C37B000807A2B /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		79865F1027D61262004FB0B4 /* DataLoadinProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadinProgressViewController.swift; sourceTree = "<group>"; };
+		79A501342829934600E31C23 /* SessionsConfigurationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionsConfigurationCell.swift; path = Powertask/Views/Sessions/Cells/SessionsConfigurationCell.swift; sourceTree = SOURCE_ROOT; };
+		79A501352829934600E31C23 /* SessionsTasksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionsTasksCell.swift; path = Powertask/Views/Sessions/Cells/SessionsTasksCell.swift; sourceTree = SOURCE_ROOT; };
+		79A5013A282993A200E31C23 /* ProgressCircleSessionsActive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircleSessionsActive.swift; sourceTree = "<group>"; };
 		79BD0D8327D2859F00849B4B /* SessionTimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		79BD0D8427D2859F00849B4B /* SessionTimeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionTimeCollectionViewCell.xib; sourceTree = "<group>"; };
 		79BD0D8727D2879200849B4B /* DaysUntilPeriodEndsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysUntilPeriodEndsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -168,11 +173,10 @@
 		79DEE2CE27972F4A00F79E83 /* PTTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTTask.swift; sourceTree = "<group>"; };
 		79DEE2D02797399D00F79E83 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		79E44B2627F0FF22007B1B44 /* ProgressCircleSessions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircleSessions.swift; sourceTree = "<group>"; };
-		79E44B2727F0FF22007B1B44 /* ProgressCircleSessionsActive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressCircleSessionsActive.swift; sourceTree = "<group>"; };
 		79E44B2C27F10532007B1B44 /* SessionsCountdownActive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsCountdownActive.swift; sourceTree = "<group>"; };
 		79E44B2D27F10532007B1B44 /* SessionsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsConfiguration.swift; sourceTree = "<group>"; };
 		79E44B2E27F10532007B1B44 /* SessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
-		79E44B2F27F10532007B1B44 /* SessionsTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsTasks.swift; sourceTree = "<group>"; };
+		79E44B2F27F10532007B1B44 /* TaskPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPicker.swift; sourceTree = "<group>"; };
 		79E44B3027F10532007B1B44 /* SessionsCountDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsCountDown.swift; sourceTree = "<group>"; };
 		B6D963ED27AB0F2400F8259D /* CalendarSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSettingsController.swift; sourceTree = "<group>"; };
 		B6D963F127AB121100F8259D /* PeriodsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodsController.swift; sourceTree = "<group>"; };
@@ -185,8 +189,6 @@
 		B6D9640227B08BBF00F8259D /* PeriodNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodNameTableViewCell.swift; sourceTree = "<group>"; };
 		B6EC335827F0DD8800FB85D0 /* TasksListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksListController.swift; sourceTree = "<group>"; };
 		B6EC335A27F0DD8E00FB85D0 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		B6EC336427F134A400FB85D0 /* SessionsConfigurationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionsConfigurationCell.swift; path = "../../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/545F9A3B-64EF-4B5B-9E7D-ABC907D60E3C/SessionsConfigurationCell.swift"; sourceTree = "<group>"; };
-		B6EC336627F134AA00FB85D0 /* SessionsTasksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionsTasksCell.swift; path = "../../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/A7232ACC-7217-4EEE-AEE6-F6BEA6CDEF40/SessionsTasksCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,8 +422,9 @@
 				79E44B2D27F10532007B1B44 /* SessionsConfiguration.swift */,
 				79E44B3027F10532007B1B44 /* SessionsCountDown.swift */,
 				79E44B2C27F10532007B1B44 /* SessionsCountdownActive.swift */,
-				79E44B2F27F10532007B1B44 /* SessionsTasks.swift */,
+				79E44B2F27F10532007B1B44 /* TaskPicker.swift */,
 				79E44B2E27F10532007B1B44 /* SessionsViewController.swift */,
+				797C8BA9282C37B000807A2B /* CircularProgressBar.swift */,
 			);
 			path = Sessions;
 			sourceTree = "<group>";
@@ -479,10 +482,10 @@
 		79E44B2327F0FF04007B1B44 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				79A501342829934600E31C23 /* SessionsConfigurationCell.swift */,
+				79A501352829934600E31C23 /* SessionsTasksCell.swift */,
+				79A5013A282993A200E31C23 /* ProgressCircleSessionsActive.swift */,
 				79E44B2627F0FF22007B1B44 /* ProgressCircleSessions.swift */,
-				79E44B2727F0FF22007B1B44 /* ProgressCircleSessionsActive.swift */,
-				B6EC336627F134AA00FB85D0 /* SessionsTasksCell.swift */,
-				B6EC336427F134A400FB85D0 /* SessionsConfigurationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -604,23 +607,23 @@
 				79C6472627D38A80000CB0E9 /* PTNetworkReachability.swift in Sources */,
 				790BE65727BC008E009D2706 /* PTCourse.swift in Sources */,
 				790BE66727BC1F28009D2706 /* TimeTableTableViewCell.swift in Sources */,
-				79E44B2B27F0FF22007B1B44 /* ProgressCircleSessionsActive.swift in Sources */,
 				79168CE827BA885700BBA389 /* ButtonTableViewCell.swift in Sources */,
 				B6D963FD27B03DFE00F8259D /* AddPeriodController.swift in Sources */,
 				7953C32C27A8359400ADE027 /* PTSubject.swift in Sources */,
 				79DEE2CF27972F4A00F79E83 /* PTTask.swift in Sources */,
 				79DEE2D12797399D00F79E83 /* Constants.swift in Sources */,
 				79168CE627BA885700BBA389 /* AllDayEventTableViewCell.swift in Sources */,
-				79E44B3427F10533007B1B44 /* SessionsTasks.swift in Sources */,
+				79E44B3427F10533007B1B44 /* TaskPicker.swift in Sources */,
 				790BE66F27BF9C4A009D2706 /* NetworkingProvider.swift in Sources */,
 				79DEE2C92797002C00F79E83 /* UserTaskTableViewCell.swift in Sources */,
-				B6EC336727F134AA00FB85D0 /* SessionsTasksCell.swift in Sources */,
+				79A501382829934600E31C23 /* SessionsConfigurationCell.swift in Sources */,
 				B6D9640127B04E4C00F8259D /* PeriodDateTableViewCell.swift in Sources */,
 				79C6472F27D3C387000CB0E9 /* FirstPeriodConfigViewController.swift in Sources */,
 				79DDD5D527CD4C6900235AE0 /* GoogleSignInViewController.swift in Sources */,
 				797849172791865F00EB8C4C /* AppDelegate.swift in Sources */,
 				79E44B3227F10533007B1B44 /* SessionsConfiguration.swift in Sources */,
 				79DDD5DF27CD4DC500235AE0 /* ConciergeViewController.swift in Sources */,
+				79A5013B282993A200E31C23 /* ProgressCircleSessionsActive.swift in Sources */,
 				7953C32E27A8469100ADE027 /* SubjectSelectorViewController.swift in Sources */,
 				790BE65927BC00A8009D2706 /* PTDay.swift in Sources */,
 				79708FA72791F64900E42731 /* CalendarsViewController.swift in Sources */,
@@ -661,6 +664,7 @@
 				B6D963F227AB121100F8259D /* PeriodsController.swift in Sources */,
 				79BD0D8927D2879200849B4B /* DaysUntilPeriodEndsCollectionViewCell.swift in Sources */,
 				79C6472427D38865000CB0E9 /* SeventhStepViewController.swift in Sources */,
+				797C8BAA282C37B000807A2B /* CircularProgressBar.swift in Sources */,
 				79DDD5DD27CD4CE000235AE0 /* FourthStepViewController.swift in Sources */,
 				7953C33127A934CF00ADE027 /* UserSubtaskTableViewCell.swift in Sources */,
 				B6EC335927F0DD8800FB85D0 /* TasksListController.swift in Sources */,
@@ -676,7 +680,7 @@
 				79E44B2A27F0FF22007B1B44 /* ProgressCircleSessions.swift in Sources */,
 				79C6473127D3C3A0000CB0E9 /* TimeTableConfigViewController.swift in Sources */,
 				7908767527BFB25800E9D0A4 /* MockRequestViewController.swift in Sources */,
-				B6EC336527F134A400FB85D0 /* SessionsConfigurationCell.swift in Sources */,
+				79A501392829934600E31C23 /* SessionsTasksCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

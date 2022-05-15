@@ -8,7 +8,10 @@
 import UIKit
 class SessionsTasksTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var titleTask: UILabel!
+    @IBOutlet weak var taskTitle: UILabel!
+    @IBOutlet var taskDate: UILabel!
+    @IBOutlet var taskColor: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

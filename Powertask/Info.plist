@@ -71,6 +71,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>&quot;Necesitamos acceder a tus canciones&quot;</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

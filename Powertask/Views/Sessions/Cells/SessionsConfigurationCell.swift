@@ -8,21 +8,26 @@
 import UIKit
 
 protocol SessionStepperProtocol: AnyObject{
-    func stepperTimeChanged(_ cell: SessionsConfigurationTableViewCell, sessionTime: Double?)
+    func stepperTimeChanged(_ cell: SessionsConfigurationTableViewCell, data: Double, stepperTag: Int)
 }
 class SessionsConfigurationTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var titleConfiguration: UILabel!
-    @IBOutlet weak var selectAmount: UIStepper!
-    @IBOutlet weak var showAmount: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var amountStepper: UIStepper!
+    @IBOutlet weak var amountLabel: UILabel!
     var delegate: SessionStepperProtocol?
     override func awakeFromNib() {
         super.awakeFromNib()
        // TODO: Tareas con más de una linea
-        selectAmount.addTarget(self, action: #selector(didTimeChanged(_ :)), for: .valueChanged)
+        amountStepper.addTarget(self, action: #selector(didQuantityChanged(_ :)), for: .valueChanged)
     }
     
-    @objc func didTimeChanged(_ sender: UIStepper){
-        delegate?.stepperTimeChanged(self, sessionTime: sender.value)
+    override func prepareForReuse() {
+        amountStepper.value = 0
+    }
+    
+    @objc func didQuantityChanged(_ sender: UIStepper){
+        print(sender.value)
+        delegate?.stepperTimeChanged(self, data: sender.value, stepperTag: sender.tag)
     }
 }
