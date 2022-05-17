@@ -84,6 +84,7 @@
 		79E44B3327F10533007B1B44 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2E27F10532007B1B44 /* SessionsViewController.swift */; };
 		79E44B3427F10533007B1B44 /* TaskPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2F27F10532007B1B44 /* TaskPicker.swift */; };
 		79E44B3527F10533007B1B44 /* SessionsCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B3027F10532007B1B44 /* SessionsCountDown.swift */; };
+		79FCBCD728340C8B00B8201E /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FCBCD628340C8B00B8201E /* TasksTableViewController.swift */; };
 		B6A07F7227F0D37C00FADF90 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7127F0D37C00FADF90 /* FSCalendar */; };
 		B6A07F7527F0D3A700FADF90 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7427F0D3A700FADF90 /* GoogleSignIn */; };
 		B6A07F7827F0D3C000FADF90 /* UIColorHexSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7727F0D3C000FADF90 /* UIColorHexSwift */; };
@@ -178,6 +179,7 @@
 		79E44B2E27F10532007B1B44 /* SessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
 		79E44B2F27F10532007B1B44 /* TaskPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPicker.swift; sourceTree = "<group>"; };
 		79E44B3027F10532007B1B44 /* SessionsCountDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsCountDown.swift; sourceTree = "<group>"; };
+		79FCBCD628340C8B00B8201E /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		B6D963ED27AB0F2400F8259D /* CalendarSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSettingsController.swift; sourceTree = "<group>"; };
 		B6D963F127AB121100F8259D /* PeriodsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodsController.swift; sourceTree = "<group>"; };
 		B6D963F327AB123F00F8259D /* OtherCalendarsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCalendarsController.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				B6EC335827F0DD8800FB85D0 /* TasksListController.swift */,
 				B6EC335A27F0DD8E00FB85D0 /* AddTaskViewController.swift */,
 				7953C32D27A8469100ADE027 /* SubjectSelectorViewController.swift */,
+				79FCBCD628340C8B00B8201E /* TasksTableViewController.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				79DDD5D327CD418300235AE0 /* OnBoardingViewController.swift in Sources */,
 				79168CF427BAF14F00BBA389 /* NewEventViewController.swift in Sources */,
 				79168CE727BA885700BBA389 /* DatePickerTableViewCell.swift in Sources */,
+				79FCBCD728340C8B00B8201E /* TasksTableViewController.swift in Sources */,
 				79168CEB27BA885700BBA389 /* TextViewTableViewCell.swift in Sources */,
 				79E44B2A27F0FF22007B1B44 /* ProgressCircleSessions.swift in Sources */,
 				79C6473127D3C3A0000CB0E9 /* TimeTableConfigViewController.swift in Sources */,

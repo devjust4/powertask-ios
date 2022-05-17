@@ -19,8 +19,6 @@ class GoogleSignInViewController: UIViewController {
         super.viewDidLoad()
         signInWithGoogleButton.colorScheme = .light
         signInWithGoogleButton.style = .wide
-        pageControl.numberOfPages = 7
-        pageControl.currentPage = 1
     }
     
     // MARK: - Navigation
