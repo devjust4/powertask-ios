@@ -109,7 +109,7 @@ class TimeTableTableViewCell: UITableViewCell {
 
 extension TimeTableTableViewCell: UIDropInteractionDelegate {
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidEnter session: UIDropSession) {
-        print("enter")
+ 
     }
     
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {

@@ -103,7 +103,6 @@ class CalendarsViewController: UIViewController {
         let selectedEvents = events.filter { event in
             let startDate = event.value.startDate.formatted(date: .complete, time: .omitted)
             let endDate = event.value.startDate.formatted(date: .complete, time: .omitted)
-            // print("selección \(selectedDate) empieza: \(startDate) termina: \(endDate) ")
             if startDate <= selectedDate && endDate >= selectedDate {
                 return true
             } else {
@@ -114,31 +113,11 @@ class CalendarsViewController: UIViewController {
         let events2 = selectedEvents.values
         
         let sortedTypes = events2.sorted { event1, event2 in
-            // festivo
-            // todo el dia
-            // examen
-            //eventos normales
             return event1.type > event2.type
-            
-//            if event1.type == event2.type {
-//                return event1.startDate > event2.startDate
-//            } else {
-//                return event1.type > event2.type
-//            }
         }
         
         let sortedEvents = sortedTypes.sorted { event1, event2 in
-            // festivo
-            // todo el dia
-            // examen
-            //eventos normales
             return event1.startDate > event2.startDate
-            
-//            if event1.type == event2.type {
-//                return event1.startDate > event2.startDate
-//            } else {
-//                return event1.type > event2.type
-//            }
         }
         
         return sortedEvents
@@ -390,12 +369,10 @@ extension CalendarsViewController: NewEventProtocol {
 
 extension Date {
     func contains(dateToCheck: Date, date1: Date, date2: Date) -> Bool {
-       // let dateToCheckInterval = DateInterval(start: <#T##Date#>, end: <#T##Date#>)
         return true
     }
     
     func isContained(date1: Date, date2: Date, dateToCheck: Date) -> Bool {
-        
         return true
     }
 }

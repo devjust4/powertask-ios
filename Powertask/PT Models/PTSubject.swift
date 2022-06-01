@@ -23,7 +23,6 @@ final class PTSubject: NSObject, NSItemProviderReading, NSItemProviderWriting, C
             do {
               //Here we decode the object back to it's class representation and return it
                 let subject = try decoder.decode(PTSubject.self, from: data)
-                print(subject)
               return subject
             } catch {
               fatalError()
@@ -35,7 +34,6 @@ final class PTSubject: NSObject, NSItemProviderReading, NSItemProviderWriting, C
     }
     
     func loadData(withTypeIdentifier typeIdentifier: String, forItemProviderCompletionHandler completionHandler: @escaping (Data?, Error?) -> Void) -> Progress? {
-        print("load data")
         let progress = Progress(totalUnitCount: 100)
             do {
               //Here the object is encoded to a JSON data object and sent to the completion handler

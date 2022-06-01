@@ -38,7 +38,7 @@ class PeriodsController: UIViewController, UITableViewDataSource, UITableViewDel
             self.previousPeriod = self.getPastPeriods(periods: PTUser.shared.periods)
             self.periodsTableView.reloadData()
         } failure: { msg in
-            print("ERRRRRROR")
+            print("ERROR")
         }
     }
     

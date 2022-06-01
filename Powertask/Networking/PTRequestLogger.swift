@@ -12,7 +12,6 @@ class PTRequestLogger: EventMonitor {
     
     let queue = DispatchQueue(label: "com.just4.powertask.networklogger")
     func requestDidFinish(_ request: Request) {
-        print(request.description)
     }
     
     func request<Value>(
@@ -24,7 +23,6 @@ class PTRequestLogger: EventMonitor {
         }
         if let json = try? JSONSerialization
             .jsonObject(with: data, options: .mutableContainers) {
-            print(json)
         }
     }
 }

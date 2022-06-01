@@ -39,7 +39,6 @@ class NetworkingProvider {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         sessionManager.request(PTRouter.initialDownload).responseDecodable(of: PTResponse.self, decoder: decoder) { response in
-            print(response.debugDescription)
             if let httpCode = response.response?.statusCode {
                 switch httpCode {
                 case 200:
@@ -91,7 +90,6 @@ class NetworkingProvider {
     //MARK: - Subjects Request
     func listSubjects(success: @escaping (_ subjects: [PTSubject]) -> (), failure: @escaping (_ error: String) ->()) {
         sessionManager.request(PTRouter.listSubjects).responseDecodable (of: PTResponse.self) { response in
-            print(response.debugDescription)
 
             if let httpCode = response.response?.statusCode {
                 switch httpCode {
@@ -146,7 +144,6 @@ class NetworkingProvider {
     // MARK: - Task Requests
     public func listTasks(success: @escaping (_ tasks: [PTTask])->(), failure: @escaping (_ msg: String?)->()) {
         sessionManager.request(PTRouter.listTasks).validate(statusCode: statusOk).responseDecodable(of: PTResponse.self) { response in
-            print(response.debugDescription)
             if let httpCode = response.response?.statusCode {
                 switch httpCode {
                 case 200:
@@ -401,7 +398,6 @@ class NetworkingProvider {
     // MARK: - Periods Request
     public func listPeriods(success: @escaping (_ periods: [PTPeriod])->(), failure: @escaping (_ msg: String?)->()) {
         sessionManager.request(PTRouter.listPeriods).validate(statusCode: statusOk).responseDecodable(of: PTResponse.self) { response in
-            print(response.debugDescription)
             if let httpCode = response.response?.statusCode {
                 switch httpCode {
                 case 200:
@@ -438,9 +434,8 @@ class NetworkingProvider {
                     "subjects" : period.subjects ?? "Sin asignaturas"
             ]
         }
-        print(parameters)
+        
         sessionManager.request("http://powertask.kurokiji.com/public/api/period/create", method: .post, parameters: period, encoder: JSONParameterEncoder.default).validate(statusCode: statusOk).responseDecodable(of: PTResponse.self) { response in
-            print(response.debugDescription)
             if let httpCode = response.response?.statusCode {
                 switch httpCode {
                 case 201:
@@ -465,7 +460,6 @@ class NetworkingProvider {
     }
     
     public func editPeriod(period: PTPeriod,success: @escaping (_ msg: String?)->(), failure: @escaping (_ msg: String?)->()) {
-        print("--- justo antes de enviar vale \(period.startDate.timeIntervalSince1970)")
         var parameters: Parameters {
             ["name": period.name,
                     "date_start": String(period.startDate.timeIntervalSince1970),
@@ -476,8 +470,6 @@ class NetworkingProvider {
         }
         
         sessionManager.request("http://powertask.kurokiji.com/public/api/period/edit/\(period.id ?? 0)", method: .put, parameters: period, encoder: JSONParameterEncoder.default).validate(statusCode: statusOk).responseDecodable(of: PTResponse.self) { response in
-            print("--- body \(response.request?.httpBody?.debugDescription)")
-            print(NSString(data: (response.request?.httpBody)!, encoding: String.Encoding.utf8.rawValue))
             if let httpCode = response.response?.statusCode {
                 switch httpCode {
                 case 200:

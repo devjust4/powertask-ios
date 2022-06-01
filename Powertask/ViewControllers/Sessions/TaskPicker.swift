@@ -32,7 +32,6 @@ class TaskPicker: UIViewController, UITableViewDataSource, UITableViewDelegate{
             self.userTasks = PTUser.shared.tasks
             PTUser.shared.savePTUser()
             self.tableView.reloadData()
-            print(tasks)
         } failure: { msg in
             print("ERROR-tasks")
         }

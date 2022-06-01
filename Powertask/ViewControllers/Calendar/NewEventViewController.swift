@@ -218,6 +218,5 @@ extension NewEventViewController: CellTextFieldProtocol, CellButtonPushedDelegat
         eventDetailsTable.beginUpdates()
         eventDetailsTable.endUpdates()
         eventNotes = editChangedWithText
-        print(editChangedWithText)
     }
 }

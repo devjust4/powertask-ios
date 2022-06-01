@@ -49,7 +49,6 @@ class MockRequestViewController: UIViewController {
             let driveScope = "https://www.googleapis.com/auth/classroom.courses.readonly"
             let grantedScopes = user.grantedScopes
             if grantedScopes == nil || !grantedScopes!.contains(driveScope) {
-              print("request again")
             }
         }
         
@@ -60,7 +59,6 @@ class MockRequestViewController: UIViewController {
                guard error == nil else { return }
                guard let authentication = authentication else { return }
             NetworkingProvider.shared.listTasks(success: { tasks in
-                print(tasks)
             }, failure: { msg in
                 print(msg)
             })

@@ -27,7 +27,6 @@ class SessionsConfigurationTableViewCell: UITableViewCell {
     }
     
     @objc func didQuantityChanged(_ sender: UIStepper){
-        print(sender.value)
         delegate?.stepperTimeChanged(self, data: sender.value, stepperTag: sender.tag)
     }
 }

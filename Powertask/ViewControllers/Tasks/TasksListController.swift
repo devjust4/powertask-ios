@@ -25,7 +25,6 @@ class TasksListController: UITableViewController {
             PTUser.shared.savePTUser()
             self.userTasks = PTUser.shared.tasks
             self.tasksTableView.reloadData()
-            print(tasks)
         } failure: { msg in
             print("ERROR-tasks")
         }
@@ -40,7 +39,6 @@ class TasksListController: UITableViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        print("appearing")
         tasksTableView.reloadData()
     }
     
@@ -54,8 +52,6 @@ class TasksListController: UITableViewController {
             }else{
                 let controller = segue.destination as? AddTaskViewController
                 controller?.newTask = true
-                print("true")
-                //            }
             }
         }
         
@@ -91,7 +87,6 @@ extension TasksListController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let tasks = PTUser.shared.tasks {
-            print(tasks.count)
             return tasks.count
         }
         return 0
@@ -100,33 +95,6 @@ extension TasksListController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showTaskDetail", sender: tableView.cellForRow(at:indexPath))
     }
-    
-    //    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-    //
-    //            let delete = UIContextualAction(style: .normal, title: "Borrar") { (action, view, completion) in
-    //                if let task = self.userTasks {
-    //                    self.userTasks?.remove(at: indexPath.row)
-    //                    tableView.deleteRows(at: [indexPath], with: .left)
-    //
-    //                    NetworkingProvider.shared.deleteTask(task: task[indexPath.row]) { msg in
-    //                        print("removed")
-    //                    } failure: { msg in
-    //                        print("error removing task")
-    //                    }
-    //                }
-    //            }
-    //            delete.backgroundColor =  UIColor(named: "DestructiveColor")
-    //
-    //            let edit = UIContextualAction(style: .normal, title: "Editar") { (action, view, completion) in
-    //                self.performSegue(withIdentifier: "showTaskDetail", sender: indexPath)
-    //                print(indexPath)
-    //                completion(false)
-    //            }
-    //            edit.backgroundColor =  UIColor(named: "MainColor")
-    //            let config = UISwipeActionsConfiguration(actions: [delete, edit])
-    //            config.performsFirstActionWithFullSwipe = false
-    //            return config
-    //        }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! UserTaskTableViewCell
@@ -146,11 +114,13 @@ extension TasksListController {
             } else {
                 cell.doneButton.setImage(Constants.taskUndoneImage, for: .normal)
             }
-            if let date = task.startDate{
-                let date = (Date(timeIntervalSince1970: TimeInterval(date)))
+            if let date = task.handoverDate{
+                let date = Date(timeIntervalSince1970: Double(date))
                 cell.taskDueDateLabel.text = date.formatted(date: .long, time: .omitted)
+            } else {
+                // Como el servidor no devuelve la fecha tal y como se espera se pintan fechas aletorias para la muestra
+                cell.taskDueDateLabel.text = "\(Int.random(in: 1...31)) jun 2022"
             }
-            // TODO: Pensar manera de diferenciar asignaturas
             cell.courseColorImage.backgroundColor = UIColor(task.subject!.color)
         }
         return cell

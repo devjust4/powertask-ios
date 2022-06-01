@@ -32,7 +32,6 @@ class TimeTableViewController: UIViewController {
                 period.startDate.timeIntervalSince1970 < Date.now.timeIntervalSince1970 && period.endDate.timeIntervalSince1970 > Date.now.timeIntervalSince1970
             })
         }
-        print("--- curren period \(currentPeriod)")
         subjects = currentPeriod?.subjects
         blocks = filterAllBlocks(blocks: currentPeriod?.blocks)
     }
@@ -42,11 +41,12 @@ class TimeTableViewController: UIViewController {
         if var period = currentPeriod, let blocks = blocks, timeTableEdited! {
             let mapBlocks = blocks.values.map({$0})
             period.blocks = mapBlocks.flatMap {$0}
-            let index = PTUser.shared.periods?.firstIndex(where: { period in
+            let periodIndex = PTUser.shared.periods?.firstIndex(where: { period in
                 period.id == currentPeriod!.id
             })
-            if let index = index {
+            if let index = periodIndex {
                 PTUser.shared.periods?[index] = period
+                print(period)
                 PTUser.shared.savePTUser()
                 NetworkingProvider.shared.editPeriod(period: period) { msg in
                     let image = UIImage.init(systemName: "calendar.badge.plus")!.withTintColor(UIColor(named: "AccentColor")!, renderingMode: .alwaysOriginal)
@@ -62,7 +62,7 @@ class TimeTableViewController: UIViewController {
     }
     
     // MARK: - Supporting functions
-    /// Devuelve un array de bloques según el `weekay` pasado.
+    /// Devuelve un array de bloques según el `weekDay` pasado.
     ///
     /// - Parameter blocks: Array de bloques.
     /// - Parameter weekday: Día de la semana del que se quieren obtener los bloques [0-6].

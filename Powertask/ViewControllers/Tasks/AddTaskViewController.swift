@@ -252,7 +252,6 @@ class AddTaskViewController: UIViewController {
             userTask!.description = descriptionTextView.text
             // TODO: Controlar nota FLOAT?
             userTask!.mark = Float(markTextField.text ?? "00")
-            print(handoverDatePicker.date)
 //            userTask!.handoverDate = handoverDatePicker.date
             Int(handoverDatePicker.date.timeIntervalSince1970)
             if !startDatePicker.isHidden {
@@ -303,7 +302,6 @@ extension AddTaskViewController: SubjectDelegate, SubtaskCellTextDelegate, Subta
     }
     
     func subjectWasChosen(_ newSubject: PTSubject) {
-        print("elegido")
         subjectButton.setTitle(newSubject.name, for: .normal)
         subjectButton.tintColor = UIColor(newSubject.color) 
         subject = newSubject

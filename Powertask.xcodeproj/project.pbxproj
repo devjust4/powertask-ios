@@ -85,6 +85,7 @@
 		79E44B3427F10533007B1B44 /* TaskPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B2F27F10532007B1B44 /* TaskPicker.swift */; };
 		79E44B3527F10533007B1B44 /* SessionsCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E44B3027F10532007B1B44 /* SessionsCountDown.swift */; };
 		79FCBCD728340C8B00B8201E /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FCBCD628340C8B00B8201E /* TasksTableViewController.swift */; };
+		79FCBCDA2834178900B8201E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 79FCBCD92834178900B8201E /* IQKeyboardManagerSwift */; };
 		B6A07F7227F0D37C00FADF90 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7127F0D37C00FADF90 /* FSCalendar */; };
 		B6A07F7527F0D3A700FADF90 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7427F0D3A700FADF90 /* GoogleSignIn */; };
 		B6A07F7827F0D3C000FADF90 /* UIColorHexSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B6A07F7727F0D3C000FADF90 /* UIColorHexSwift */; };
@@ -199,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A07F7527F0D3A700FADF90 /* GoogleSignIn in Frameworks */,
+				79FCBCDA2834178900B8201E /* IQKeyboardManagerSwift in Frameworks */,
 				B6A07F7B27F0D3DF00FADF90 /* Alamofire in Frameworks */,
 				B6A07F7827F0D3C000FADF90 /* UIColorHexSwift in Frameworks */,
 				798B064427E12E94004F1254 /* SwiftHEXColors in Frameworks */,
@@ -537,6 +539,7 @@
 				B6A07F7427F0D3A700FADF90 /* GoogleSignIn */,
 				B6A07F7727F0D3C000FADF90 /* UIColorHexSwift */,
 				B6A07F7A27F0D3DF00FADF90 /* Alamofire */,
+				79FCBCD92834178900B8201E /* IQKeyboardManagerSwift */,
 			);
 			productName = Powertask;
 			productReference = 797849132791865F00EB8C4C /* Powertask.app */;
@@ -574,6 +577,7 @@
 				B6A07F7327F0D3A700FADF90 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				B6A07F7627F0D3C000FADF90 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */,
 				B6A07F7927F0D3DF00FADF90 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				79FCBCD82834178900B8201E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 797849142791865F00EB8C4C /* Products */;
 			projectDirPath = "";
@@ -930,6 +934,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		79FCBCD82834178900B8201E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		B6A07F7027F0D37C00FADF90 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
@@ -979,6 +991,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 79C6471C27D36F2E000CB0E9 /* XCRemoteSwiftPackageReference "SPIndicator" */;
 			productName = SPIndicator;
+		};
+		79FCBCD92834178900B8201E /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 79FCBCD82834178900B8201E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 		B6A07F7127F0D37C00FADF90 /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
